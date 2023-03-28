@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "../styles/globals.css";
 
 export const metadata = {
   title: "Next.js",
@@ -12,11 +13,8 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
-      <div>
         <Link href="/">
-          <h1>primaevus</h1>
         </Link>
-        <p>welcome.</p>
       </div>
     </header>
   );
@@ -24,7 +22,6 @@ export default function RootLayout({
   const footer = (
     <footer>
       <div>
-        <br />
         <h3>from the primordium</h3>
       </div>
     </footer>
@@ -34,9 +31,6 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        {header}
-        {children}
-        {footer}
       </body>
     </html>
   );
