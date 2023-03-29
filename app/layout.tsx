@@ -13,15 +13,18 @@ export default function RootLayout({
 }) {
   const header = (
     <header>
+      <div className="text-center bg-stone-500 p-8 mb-6">
         <Link href="/">
+          <h1 className="text-3xl font-bold underline text-white">Dev Log</h1>
         </Link>
+        <p className="text-stone-200">welcome.</p>
       </div>
     </header>
   );
 
   const footer = (
     <footer>
-      <div>
+      <div className=" bg-stone-200 py-6 mt-6 text-center text-stone-300 italic">
         <h3>from the primordium</h3>
       </div>
     </footer>
@@ -31,6 +34,11 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
+        <div className="mx-auto max-w-2xl px-4">
+          {header}
+          {children}
+          <div className="inset-x-0 bottom-0 bg-white">{footer}</div>
+        </div>
       </body>
     </html>
   );
