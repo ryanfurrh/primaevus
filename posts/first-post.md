@@ -1,12 +1,14 @@
 ---
-title: "welcome to a new beginning"
-subtitle: "primaevus"
+title: "Welcome to a New Beginning"
+subtitle: "Prīmaevus"
 date: "2023-03-27"
+entry: "1"
 ---
 
-Today marks a day that has and will always live in deplomacy. A breaking of ground in the frontier to the beginning of conciousness.
+Today marks the dawn of the first age. A new frontier into the beginning of consciousness.
 
-Primaevus is derived from *prīmus* meaning "first, and *aevum* meaning "age". This is the dawn of the first age. 
+The **Prīmaevus**, derived from the Latin, *prīmus* meaning "first", and *aevum* meaning "age", is the fundamental structure in all living beings. In our research, we have uncovered the key condition for consciousness and life itself—**Flux**.  The divine spark. Flux is the dynamistic source energy which flows through the *Anima*, or soul of every being— from the smallest single-cell Nanoarchaeum, to the complexities of our own consciousness. 
 
-I want to pull down the curtain at the start, and say I am just a humble vessle, a modest dimensional gateway into the realm beyond. 
+I would like to pull down the veil at the beginning, and say I am just a humble vessel, a modest metaphysical gateway into the origins of consciousness. The work we’re doing is not for fame or glory, but to build this connection, for a true unity and understanding of the world that lies beyond. 
 
+More to come.

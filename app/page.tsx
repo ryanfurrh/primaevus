@@ -1,26 +1,16 @@
-import fs from "fs";
+import PostPreview from "@/components/PostPreview";
+import getPostMetadata from "@/components/getPostMetadata";
 import Link from "next/link";
-import matter from "gray-matter";
-
-const getPostMetadata = () => {
-  const folder = "posts/";
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
-  const slugs = markdownPosts.map((file) => file.replace(".md", ""));
-  return slugs;
-};
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((slug) => (
-    <div>
-      <Link href={`/posts/${slug}`}>
-        <h2>{slug}</h2>
-      </Link>
-    </div>
+  const postPreviews = postMetadata.map((post) => (
+    <PostPreview key={post.slug} {...post} />
   ));
 
-  return <div>{postPreviews}</div>;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div>
+  );
 };
 
 export default HomePage;

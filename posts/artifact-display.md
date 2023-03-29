@@ -1,14 +1,18 @@
 ---
-title: "cabinent of curiosities"
+title: "Cabinet of Curiosities"
 subtitle: "intro to the artifact display"
-date: "2023-03-  "
+date: "2023-03-28"
+entry: "2"
 ---
 
-The first component to unlocking access into this new realm is an artifact database. Artifacts are any kind of object, weapon, device, or materialization. In the artifact database, you can view a 3d representation, locate it's point on the node map, and inspect the artifact's structure wavform.
+The first component to unlocking access into this new realm is an artifact database. Artifacts are any kind of object, weapon, device, or materialization. In the artifact database, you can:
+1. view a 3d representation of each artifact 
+2. locate it's point on the node map 
+3. inspect the artifact's structure wavform.
 
 ## The Node Map
 
-A complex web of all artifacts in their relation to each other, and to the source node. All artifacts stem from the same origin point, but their distances can vary. Like the immense pressure the weight of the earth has on it's core (5 sextillion tons), the closer an artifact is to the source node, the higher the pressure and the lower it's stability. 
+```A complex web``` of all artifacts in their relation to each other, and to the source node. All artifacts stem from the same origin point, but their distances can vary. Like the immense pressure the weight of the earth has on it's core (5 sextillion tons), the closer an artifact is to the source node, the higher the pressure and the lower it's stability. 
 
 ## Waveform Display 
 
@@ -16,12 +20,13 @@ A visualizer that inspects the artifact structural stability. The display pinpoi
 
 ![images/waveform-display](/images/waveform-display.png)
 
-Copy code
-| Stability | Description | Column 3 |
+A working list of all statuses:
+
+| Stability | Description | --- |
 | -------- | -------- | -------- |
-| Stable |  |  |
-| Dynamic |  |  |
-| Evolving |  |  |
-| Spiking |  |  |
-| Devolving |  |  |
-| Depreciating |  |  |
+| Stable | --- | --- |
+| Dynamic | --- | --- |
+| Evolving | --- | --- |
+| Spiking | --- | --- |
+| Devolving | --- | --- |
+| Depreciating | --- | --- |
