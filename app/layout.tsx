@@ -25,7 +25,6 @@ export default function RootLayout({
       <head />
       <body>
         <div className="mx-auto max-w-2xl px-4">
-          {header}
           <Header />
           {children}
           <div className="inset-x-0 bottom-0 bg-white">{footer}</div>
