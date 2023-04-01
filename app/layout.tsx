@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "../styles/globals.css";
+import { Header } from "@/components/Header";
 
 export const metadata = {
   title: "Next.js",
@@ -11,17 +12,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const header = (
-    <header>
-      <div className="text-center bg-stone-500 p-8 mb-6">
-        <Link href="/">
-          <h1 className="text-3xl font-bold underline text-white">Dev Log</h1>
-        </Link>
-        <p className="text-stone-200">welcome.</p>
-      </div>
-    </header>
-  );
-
   const footer = (
     <footer>
       <div className=" bg-stone-200 py-6 mt-6 text-center text-stone-300 italic">
@@ -36,6 +26,7 @@ export default function RootLayout({
       <body>
         <div className="mx-auto max-w-2xl px-4">
           {header}
+          <Header />
           {children}
           <div className="inset-x-0 bottom-0 bg-white">{footer}</div>
         </div>
