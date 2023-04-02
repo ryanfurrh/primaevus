@@ -1,5 +1,5 @@
 ---
-title: "Welcome to a New Beginning"
+title: "The Dawn of the First Age"
 subtitle: "Prīmaevus"
 date: "2023-03-27"
 entry: "1"
