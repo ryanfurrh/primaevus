@@ -14,6 +14,28 @@ export default function Page() {
       </div>
       <div className="ml-52 px-12">
         <h1>coming soon</h1>
+        <div className="w-1/4">
+          <div className="flex flex-row w-full justify-between p-4">
+            <Image
+              src="/gifs/construction-1.gif"
+              alt={""}
+              width={48}
+              height={48}
+            />
+            <Image
+              src="/gifs/construction-2.gif"
+              alt={""}
+              width={100}
+              height={50}
+            />
+            <Image
+              src="/gifs/construction-1.gif"
+              alt={""}
+              width={48}
+              height={48}
+            />
+          </div>
+        </div>
         <Image src="/gifs/cube.gif" alt={""} width={225} height={225} />
       </div>
     </div>

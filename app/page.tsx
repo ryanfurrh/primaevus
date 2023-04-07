@@ -27,7 +27,7 @@ export default function HomePage() {
             <Image
               src="/gifs/construction-1.gif"
               alt={""}
-              width={48}
+              width={100}
               height={48}
             />
             <h1 className="text-teal-300 font-semibold tracking-[.5rem] text-center">
