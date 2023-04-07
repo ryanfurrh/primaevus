@@ -1,6 +1,6 @@
 ---
-title: "Cabinet of Curiosities"
-subtitle: "intro to the artifact display"
+title: "Artifact Display"
+subtitle: "Artifact UI"
 date: "2023-03-28"
 entry: "2"
 ---
