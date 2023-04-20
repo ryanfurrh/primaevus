@@ -32,6 +32,10 @@ export default function RootLayout({
             <div className="flex flex-col z-10 border-stone-200 border-2">
               <NavHeader />
               <GlobalNav />
+      <body
+        className="font-mono overflow-y-scroll"
+        style={{ WebkitFontSmoothing: "none" }}
+      >
           <div className="flex flex-col min-h-screen justify-between">
             <div className="">{children}</div>
             <div className="">
