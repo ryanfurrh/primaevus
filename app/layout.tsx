@@ -32,6 +32,10 @@ export default function RootLayout({
             <div className="flex flex-col z-10 border-stone-200 border-2">
               <NavHeader />
               <GlobalNav />
+          <div className="flex flex-col min-h-screen justify-between">
+            <div className="">{children}</div>
+            <div className="">
+              <Footer />
             </div>
           </div>
           <div className="flex flex-col h-full max-w-screen content-between">
