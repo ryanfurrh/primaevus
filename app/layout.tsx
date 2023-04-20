@@ -26,25 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ibm.variable}`}>
       <head />
-      <body className="font-mono">
-        <div className="flex flex-row w-screen h-full">
-          <div className="fixed w-48 ml-4 mt-4">
-            <div className="flex flex-col z-10 border-stone-200 border-2">
-              <NavHeader />
-              <GlobalNav />
       <body
         className="font-mono overflow-y-scroll"
         style={{ WebkitFontSmoothing: "none" }}
       >
+        <div className="flex md:flex-col w-auto md:fixed z-10 border-stone-200 border-2">
+          <NavHeader />
+          <GlobalNav />
+        </div>
+        <div className="md:pl-56">
           <div className="flex flex-col min-h-screen justify-between">
             <div className="">{children}</div>
             <div className="">
               <Footer />
             </div>
-          </div>
-          <div className="flex flex-col h-full max-w-screen content-between">
-            <div className="flex flex-col h-full min-h-48">{children}</div>
-            <Footer />
           </div>
         </div>
       </body>
