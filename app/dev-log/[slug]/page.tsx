@@ -47,6 +47,7 @@ const PostPage = (props: any) => {
             </h3>
             <h1 className="text-2xl font-bold text-stone-600">
               {post.data.title}
+              <Balancer>{post.data.title}</Balancer>
             </h1>
             <div className="flex flex-row gap-4 text-sm text-stone-400">
               <p>Entry #{post.data.entry}</p>
