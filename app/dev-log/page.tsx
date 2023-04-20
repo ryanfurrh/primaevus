@@ -15,12 +15,12 @@ const DevLog = () => {
   ));
 
   return (
-    <div className="max-w-screen">
+    <div className="">
       <div>
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
 
-      <div className="ml-52 grid grid-cols-1 md:grid-cols-2 gap-4 px-12">
+      <div className="grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-2 gap-4 px-4 md:px-0 md:max-w-3xl">
         {postPreviews}
       </div>
     </div>

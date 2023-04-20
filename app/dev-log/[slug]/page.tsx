@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import getPostMetadata from "@/components/getPostMetadata";
 import { PageHeader } from "@/components/PageHeader";
 import Link from "next/link";
+import Balancer from "react-wrap-balancer";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -30,23 +31,23 @@ const PostPage = (props: any) => {
   const post = getPostContent(slug);
   return (
     <div className="max-w-screen">
-      <div className="mb-12">
+      <div className="mb-8 md:mb-12">
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
-      <div className="">
-        <Link href={"/dev-log"} className="absolute ml-60">
+      <div className="flex flex-col md:flex-row ">
+        <Link href={"/dev-log"} className="px-2 md:px-6">
           <img
             src="/icons/backarrow.svg"
             className="w-5 h-5 opacity-30 hover:opacity-80"
           />
         </Link>
-        <div className="ml-60 px-10 h-full">
+        <div className=" h-full px-4 pt-4 md:p-0">
           <div className="mb-4">
             <h3 className="text-sm font-semibold leading-none uppercase text-stone-400">
               {post.data.subtitle}
             </h3>
-            <h1 className="text-2xl font-bold text-stone-600">
-              {post.data.title}
+            <h1 className="text-4xl md:text-2xl font-bold text-stone-600 leading-none">
+              <Balancer>{post.data.title}</Balancer>
             </h1>
             <div className="flex flex-row gap-4 text-sm text-stone-400">
               <p>Entry #{post.data.entry}</p>

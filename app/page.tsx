@@ -12,46 +12,51 @@ export default function HomePage() {
       <div className="">
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
-      <div className="ml-52 px-12 ">
-        <h1 className="font-mono">hello world.</h1>
-        <div
-          style={{
-            backgroundImage: `url(/gifs/dot-grid-movement.gif)`,
-            height: "500px",
-            width: "500px",
-            backgroundBlendMode: "saturation",
-          }}
-          className=" bg-cover bg-no-repeat bg-teal-600"
-        >
-          <div className="flex flex-row w-full justify-between p-4">
-            <Image
-              src="/gifs/construction-1.gif"
-              alt={""}
-              width={100}
-              height={48}
-            />
-            <h1 className="text-teal-300 font-semibold tracking-[.5rem] text-center">
-              UNDER
-              <br />
-              CONSTRUCTION
-            </h1>
-            <Image
-              src="/gifs/construction-1.gif"
-              alt={""}
-              width={48}
-              height={48}
-            />
-          </div>
-          <div className="w-full flex justify-center pt-24">
-            <div
-              style={{
-                backgroundImage: `url(/gifs/computer-2.gif)`,
-                height: "180px",
-                width: "240px",
-                backgroundBlendMode: "color-dodge",
-              }}
-              className=" bg-contain bg-no-repeat bg-cyan-900 opacity-80"
-            ></div>
+      <div className="w-screen overflow-clip">
+        <div className="flex flex-col shrink items-center">
+          <h1 className="font-mono text-center mb-12">hello world.</h1>
+
+          <div
+            style={{
+              backgroundImage: `url(/gifs/dot-grid-movement.gif)`,
+              height: "500px",
+              width: "500px",
+              backgroundBlendMode: "saturation",
+            }}
+            className="bg-contain shrink bg-no-repeat bg-teal-600 max-w-xl flex flex-col w-full"
+          >
+            <div className="flex w-full h-auto justify-center mt-9 gap-4 md:gap-16">
+              <Image
+                src="/gifs/construction-1.gif"
+                alt={""}
+                width={48}
+                height={48}
+                className="shrink-0"
+              />
+              <h1 className="text-teal-300 text-sm font-semibold tracking-[.3rem] text-center">
+                UNDER
+                <br />
+                CONSTRUCTION
+              </h1>
+              <Image
+                src="/gifs/construction-1.gif"
+                alt={""}
+                width={48}
+                height={48}
+                className="shrink-0"
+              />
+            </div>
+            <div className="flex h-auto justify-center mt-24">
+              <div
+                style={{
+                  backgroundImage: `url(/gifs/computer-2.gif)`,
+                  height: "180px",
+                  width: "240px",
+                  backgroundBlendMode: "color-dodge",
+                }}
+                className="bg-cover bg-no-repeat bg-cyan-900 opacity-80 md:w-full"
+              ></div>
+            </div>
           </div>
         </div>
       </div>

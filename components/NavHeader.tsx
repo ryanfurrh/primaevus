@@ -3,7 +3,7 @@ import Link from "next/link";
 export function NavHeader() {
   return (
     <header>
-      <div className="text-center bg-stone-200 px-4 pb-5 pt-4">
+      <div className="text-center bg-stone-200 p-5">
         <Link
           href="/"
           className="flex flex-row justify-self-stretch justify-start items-center "
