@@ -13,7 +13,27 @@ module.exports = {
       fontFamily: {
         mono: ['var(--font-plex)']
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            WebkitFontSmoothing: 'none',
+          },
+        },
+      },
+      imageRendering: {
+        pixelated: {
+          '-webkit-optimize-contrast': 'none',
+          '-webkit-interpolation-mode': 'nearest-neighbor',
+          'image-rendering': 'pixelated',
+        },
+      },
+      screens: {
+        'xs': '450px',
+      },
     },
+  },
+  variants: {
+    imageRendering: ['responsive'],
   },
   plugins: [
     require('@tailwindcss/typography'),
