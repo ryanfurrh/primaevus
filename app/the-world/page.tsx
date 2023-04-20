@@ -33,6 +33,16 @@ export default function Page() {
               alt={""}
               width={48}
               height={48}
+              className="shrink-0"
+            />
+          </div>
+          <div className="max-w-xs mt-12">
+            <Image
+              src={"/images/scavenger.jpg"}
+              alt={""}
+              width={612}
+              height={796}
+              className="image-rendering-pixelated bg-cover border-2 border-stone-300 border-t-[10px] p-4 "
             />
           </div>
         </div>
