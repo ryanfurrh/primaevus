@@ -12,9 +12,9 @@ export default function Page() {
       <div className="">
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
-      <div className="md:px-12 flex flex-col items-center">
-        <div className="w-2/3 items-center">
-          <div className="flex h-auto justify-center gap-9 md:gap-16">
+      <div className="md:px-12 flex flex-1 justify-center">
+        <div className="flex flex-col">
+          <div className="flex h-auto gap-9 md:gap-16">
             <Image
               src="/gifs/construction-1.gif"
               alt={""}
@@ -34,15 +34,15 @@ export default function Page() {
               height={48}
             />
           </div>
-        </div>
-        <div className="max-w-lg w-2/3 mx-auto mt-12 border-2 border-stone-300 border-t-[10px]">
-          <Image
-            src="/gifs/cube.gif"
-            alt={""}
-            width={225}
-            height={225}
-            className="image-pixelated w-full"
-          />
+          <div className="max-w-lg mt-12 border-2 border-stone-300 border-t-[10px]">
+            <Image
+              src="/gifs/cube.gif"
+              alt={""}
+              width={225}
+              height={225}
+              className="image-pixelated w-full"
+            />
+          </div>
         </div>
       </div>
     </div>

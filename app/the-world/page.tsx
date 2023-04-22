@@ -13,8 +13,8 @@ export default function Page() {
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
 
-      <div className="md:px-12 flex flex-col items-center ">
-        <div className="w-2/3 items-center">
+      <div className="md:px-12 flex flex-1 justify-center ">
+        <div className="flex flex-col">
           <div className="flex h-auto justify-center gap-9 md:gap-16">
             <Image
               src="/gifs/construction-1.gif"
@@ -38,15 +38,13 @@ export default function Page() {
               className="shrink-0"
             />
           </div>
-          <div className="max-w-xs mt-12">
-            <Image
-              src={"/images/scavenger.jpg"}
-              alt={""}
-              width={612}
-              height={796}
-              className="image-rendering-pixelated bg-cover border-2 border-stone-300 border-t-[10px] p-4 "
-            />
-          </div>
+          <Image
+            src={"/images/scavenger.jpg"}
+            alt={""}
+            width={612}
+            height={796}
+            className="image-rendering-pixelated bg-cover border-2 border-stone-300 border-t-[10px] p-4 max-w-xs "
+          />
         </div>
       </div>
     </div>
