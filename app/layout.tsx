@@ -34,7 +34,7 @@ export default function RootLayout({
           <NavHeader />
           <GlobalNav />
         </div>
-        <div className="md:pl-56">
+        <div className="md:pl-48">
           <div className="flex flex-col min-h-screen justify-between">
             <div className="">{children}</div>
             <div className="">
