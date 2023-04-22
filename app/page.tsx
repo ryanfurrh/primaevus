@@ -12,8 +12,8 @@ export default function HomePage() {
       <div className="">
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
-      <div className="w-screen overflow-clip">
-        <div className="flex flex-col shrink items-center">
+      <div className="flex flex-1 overflow-clip justify-center">
+        <div className="flex flex-col">
           <h1 className="font-mono text-center mb-12">hello world.</h1>
 
           <div
