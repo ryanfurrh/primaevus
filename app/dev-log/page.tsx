@@ -15,13 +15,14 @@ const DevLog = () => {
   ));
 
   return (
-    <div className="">
+    <div className="max-w-4xl">
       <div>
         <PageHeader name={metadata.title} description={metadata.description} />
       </div>
-
-      <div className="grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-2 gap-4 px-4 md:px-0 md:max-w-3xl">
-        {postPreviews}
+      <div className="">
+        <div className="grid grid-cols-1 justify-items-center md:justify-items-start lg:grid-cols-2 gap-4 px-4 md:mx-16">
+          {postPreviews}
+        </div>
       </div>
     </div>
   );
