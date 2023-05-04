@@ -1,8 +1,9 @@
 import { PageHeader } from "@/components/PageHeader";
+import { PrimaeLogo } from "@/public/icons";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Prīmaevus",
+  title: "Primævus",
   description: "",
 };
 
@@ -10,11 +11,15 @@ export default function HomePage() {
   return (
     <div className="">
       <div className="">
-        <PageHeader name={metadata.title} description={metadata.description} />
+        <PageHeader
+          name={metadata.title}
+          description={metadata.description}
+          icon={<PrimaeLogo className="w-9 h-9" />}
+        />
       </div>
-      <div className="flex flex-1 overflow-clip justify-center">
+      <div className="flex justify-center flex-1 overflow-clip">
         <div className="flex flex-col">
-          <h1 className="font-ibm text-center mb-12">hello world.</h1>
+          <h1 className="mb-12 text-center font-ibm">hello world.</h1>
 
           <div
             style={{
@@ -23,9 +28,9 @@ export default function HomePage() {
               width: "500px",
               backgroundBlendMode: "saturation",
             }}
-            className="bg-contain shrink bg-no-repeat bg-teal-600 max-w-xl flex flex-col w-full"
+            className="flex flex-col w-full max-w-xl bg-teal-600 bg-no-repeat bg-contain shrink"
           >
-            <div className="flex w-full h-auto justify-center mt-9 gap-4 md:gap-16">
+            <div className="flex justify-center w-full h-auto gap-4 mt-9 md:gap-16">
               <Image
                 src="/gifs/construction-1.gif"
                 alt={""}
@@ -46,7 +51,7 @@ export default function HomePage() {
                 className="shrink-0"
               />
             </div>
-            <div className="flex h-auto justify-center mt-24">
+            <div className="flex justify-center h-auto mt-24">
               <div
                 style={{
                   backgroundImage: `url(/gifs/computer-2.gif)`,
@@ -54,7 +59,7 @@ export default function HomePage() {
                   width: "240px",
                   backgroundBlendMode: "color-dodge",
                 }}
-                className="bg-cover bg-no-repeat bg-cyan-900 opacity-70 md:w-full"
+                className="bg-no-repeat bg-cover bg-cyan-900 opacity-70 md:w-full"
               ></div>
             </div>
           </div>
