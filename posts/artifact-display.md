@@ -5,6 +5,8 @@ date: "2023-03-28"
 entry: "2"
 ---
 
+![icons/device-1](/icons/device-1.svg)
+
 The first component to unlocking access into this new realm is an artifact database. Artifacts are any kind of object, weapon, device, or materialization. In the artifact database, you can:
 1. view a 3d representation of each artifact 
 2. locate it's point on the node map 

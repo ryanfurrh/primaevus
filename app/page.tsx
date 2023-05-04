@@ -14,7 +14,7 @@ export default function HomePage() {
       </div>
       <div className="flex flex-1 overflow-clip justify-center">
         <div className="flex flex-col">
-          <h1 className="font-mono text-center mb-12">hello world.</h1>
+          <h1 className="font-ibm text-center mb-12">hello world.</h1>
 
           <div
             style={{
@@ -54,7 +54,7 @@ export default function HomePage() {
                   width: "240px",
                   backgroundBlendMode: "color-dodge",
                 }}
-                className="bg-cover bg-no-repeat bg-cyan-900 opacity-80 md:w-full"
+                className="bg-cover bg-no-repeat bg-cyan-900 opacity-70 md:w-full"
               ></div>
             </div>
           </div>

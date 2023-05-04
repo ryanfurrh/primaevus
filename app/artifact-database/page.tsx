@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/PageHeader";
+import { ArtifactDatabaseIcon } from "@/public/icons";
 import Image from "next/image";
 
 export const metadata = {
@@ -10,11 +11,15 @@ export default function Page() {
   return (
     <div className="">
       <div className="">
-        <PageHeader name={metadata.title} description={metadata.description} />
+        <PageHeader
+          name={metadata.title}
+          description={metadata.description}
+          icon={<ArtifactDatabaseIcon className="w-6 h-6" />}
+        />
       </div>
-      <div className="md:px-12 flex flex-1 justify-center">
-        <div className="flex flex-col">
-          <div className="flex h-auto gap-9 md:gap-16">
+      <div className="flex justify-center flex-1 md:px-12">
+        <div className="flex flex-col place-content-center">
+          <div className="flex justify-center h-auto gap-9 md:gap-16 place-content-center">
             <Image
               src="/gifs/construction-1.gif"
               alt={""}
@@ -34,13 +39,13 @@ export default function Page() {
               height={48}
             />
           </div>
-          <div className="max-w-lg mt-12 border-2 border-stone-300 border-t-[10px]">
+          <div className=" w-[300px] mt-12 border-2 border-sand-300 border-t-[10px] place-items-center">
             <Image
               src="/gifs/cube.gif"
               alt={""}
-              width={225}
-              height={225}
-              className="image-pixelated w-full"
+              width={200}
+              height={200}
+              className="self-center h-full image-pixelated"
             />
           </div>
         </div>

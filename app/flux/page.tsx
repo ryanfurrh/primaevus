@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/PageHeader";
+import { FluxIcon } from "@/public/icons";
 import Image from "next/image";
 
 export const metadata = {
@@ -10,11 +11,15 @@ export default function Page() {
   return (
     <div className="">
       <div className="">
-        <PageHeader name={metadata.title} description={metadata.description} />
+        <PageHeader
+          name={metadata.title}
+          description={metadata.description}
+          icon={<FluxIcon className="w-6 h-6" />}
+        />
       </div>
-      <div className="md:px-12 flex flex-col items-center">
-        <div className="w-2/3 items-center">
-          <div className="flex h-auto justify-center gap-9 md:gap-16">
+      <div className="flex flex-col items-center md:px-12">
+        <div className="items-center w-2/3">
+          <div className="flex justify-center h-auto gap-9 md:gap-16">
             <Image
               src="/gifs/construction-1.gif"
               alt={""}
@@ -42,7 +47,7 @@ export default function Page() {
             alt={""}
             width={175}
             height={250}
-            className="mx-auto mt-12 border-2 border-stone-300 border-t-[10px] p-2 "
+            className="mx-auto mt-12 border-2 border-sand-300 border-t-[10px] p-2 "
           />
         </div>
       </div>
