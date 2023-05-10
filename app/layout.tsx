@@ -22,6 +22,7 @@ const archivo = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",
   axes: ["wdth"],
+  display: "swap",
 });
 
 const orbitron = Orbitron({
@@ -45,6 +46,8 @@ const ibm = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--font-ibm",
   weight: ["100", "200", "300", "400", "500", "600", "700"],
+
+  display: "swap",
 });
 
 export default function RootLayout({
