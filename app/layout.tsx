@@ -1,9 +1,7 @@
-import Link from "next/link";
 import "../styles/globals.css";
 import { GlobalNav } from "@/components/GlobalNav";
 import { NavHeader } from "@/components/NavHeader";
 import { Footer } from "@/components/Footer";
-import { PageHeader } from "@/components/PageHeader";
 import {
   Archivo,
   IBM_Plex_Mono,
