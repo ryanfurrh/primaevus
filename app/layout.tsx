@@ -60,21 +60,17 @@ export default function RootLayout({
       className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${orbitron.variable}  font-ibm`}
     >
       <body
-        className="overflow-y-scroll bg-sand-100"
+        className="flex flex-col h-screen bg-sand-100 font-ibm"
         style={{ WebkitFontSmoothing: "none" }}
       >
-        <div className="z-10 flex w-auto border-2 md:flex-col md:fixed border-sand-400 font-ibm">
+        <header className="z-10 flex border-2 md:fixed md:flex-col border-sand-400 font-ibm">
           <NavHeader />
           <GlobalNav />
-        </div>
-        <div className="md:pl-56 font-ibm">
-          <div className="flex flex-col justify-between min-h-screen">
-            <div className="">{children}</div>
-            <div className="">
-              <Footer />
-            </div>
-          </div>
-        </div>
+        </header>
+        <main className="flex flex-col flex-1 overflow-y-scroll md:pl-56">
+          <div className="flex justify-center flex-1">{children}</div>
+          <Footer />
+        </main>
       </body>
     </html>
   );
