@@ -77,3 +77,59 @@ function GlobalNavItem({ item }: { item: Item }) {
     </Link>
   );
 }
+
+function NavHeader({ isSidebarCollapsed }) {
+  const segment = useSelectedLayoutSegment();
+  const isActive = null === segment;
+
+  return (
+    <div
+      className={
+        isSidebarCollapsed
+          ? "w-auto py-2 h-fit px-2 border-b-1 border-pale-100 bg-sand-100 dark:bg-ink-900 opacity-85"
+          : "w-full px-3 py-2 text-center md:border-b-1 border-pale-100 md:px-5 md:py-4 bg-sand-100 dark:bg-ink-900 opacity-85"
+      }
+    >
+      <Link
+        href="/"
+        className="flex content-center w-auto md:flex-col place-items-start"
+      >
+        <div className=""></div>
+        <div
+          className={
+            isSidebarCollapsed
+              ? "flex justify-center px-1 py-1 md:p-3 border-1 rounded-lg hover:mt-1 border-stone-400 dark:border-pale-100/20 bg-sand-200 dark:bg-ink-900 hover:-translate-y-1.5 hover:border-b-[6px] transition-all"
+              : "flex md:flex-col justify-center gap-2 px-1 py-2 md:p-4 border-1 rounded-lg hover:mt-1 border-stone-400 dark:border-pale-100/20 bg-sand-200 dark:bg-ink-900 hover:-translate-y-1.5 hover:border-b-[6px] transition-all"
+          }
+        >
+          <div
+            className={
+              isActive
+                ? "flex flex-col text-stone-500 dark:text-neptune-400 gap-2 justify-center flex-auto h-full transition-all"
+                : "flex flex-col text-stone-500 dark:text-neptune-700 hover:dark:text-neptune-400 gap-2 justify-center flex-auto w-full h-full transition-all"
+            }
+          >
+            {isSidebarCollapsed ? (
+              <PrimaeLogoMinimal className="w-8 h-8" />
+            ) : (
+              <PrimaeLogo
+                className={
+                  "self-center w-[98px] h-8 opacity-60 text-inherit md:w-[98px] md:h-11"
+                }
+              />
+            )}
+            <h1
+              className={
+                isSidebarCollapsed
+                  ? "hidden"
+                  : "text-lg font-extrabold leading-[1.125rem] md:text-[24px] dark:text-inherit font-archivo font-stretch md:flex hidden"
+              }
+            >
+              Primæ
+            </h1>
+          </div>
+        </div>
+      </Link>
+    </div>
+  );
+}
