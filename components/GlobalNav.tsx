@@ -7,73 +7,171 @@ import { useSelectedLayoutSegment } from "next/navigation";
 import clsx from "clsx";
 import { GrMenu } from "react-icons/gr";
 import { useState } from "react";
+import {
+  ArrowLeft,
+  ArrowSelect,
+  Close,
+  Menu,
+  PrimaeLogo,
+  PrimaeLogoMinimal,
+} from "@/public/icons";
+import { useMediaQuery } from "@mui/material";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export function GlobalNav() {
+  // const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  // const [hideOnMobile, setHideOnMobile] = useState(false);
+  // useEffect(() => {
+  //   setHideOnMobile(isMobile);
+  // }, [isMobile]);
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // const isScreenBig = useMediaQuery({ query: "min-width: 768px" });
+  // const matches = useMediaQuery("(max-width:768px)", { noSsr: true });
+
+  const [isSidebarCollapsed, toggleSidebarCollapse] = useState(false);
+
+  const toggleSidebarCollapseHandler = () => {
+    // matches
+    //   ? toggleSidebarCollapse(false)
+    //   :
+    toggleSidebarCollapse(!isSidebarCollapsed);
+  };
+
+  // matches ? toggleSidebarCollapse : toggleSidebarCollapse(false);
+
   return (
-    <div className="flex flex-row items-center justify-between w-full md:items-start md:h-screen bg-sand-200 font-ibm">
-      <div>
-        <nav className="flex flex-col ">
-          {NavIndex.map((section) => {
-            return (
-              <div className="hidden md:flex md:flex-auto lg:inline-flex ">
-                {" "}
-                {section.items.map((item) => (
-                  <GlobalNavItem item={item} />
-                ))}
-              </div>
-            );
-          })}
-        </nav>
-      </div>
-      <div onClick={handleNav} className="px-5 cursor-pointer md:hidden">
-        <GrMenu size={25} className="" />
-      </div>
+    <div className={`flex flex-row-reverse w-full md:w-auto gap-2 h-fit`}>
+      <button
+        className="hidden w-4 h-4 md:flex"
+        onClick={toggleSidebarCollapseHandler}
+      >
+        {" "}
+        <ArrowLeft />
+      </button>
       <div
         className={
-          menuOpen
-            ? "fixed right-[65px] top-0 w-[calc(100vw-101px)] xs:w-auto my-4 h-auto md:hidden bg-sand-100 bg-opacity-95 border-2 border-sand-400 ease-in-out duration-300 z-20"
-            : "fixed right-[-100%] top-0 w-[calc(100vw-101px)] xs:w-auto my-4 h-screen-1/2 md:hidden bg-sand-100 bg-opacity-95 border-2 border-sand-400 ease-in-out duration-500 z-20"
+          isSidebarCollapsed
+            ? "flex flex-row md:flex-col w-full items-center justify-between border-1 border-sand-400 rounded dark:border-pale-100 dark:bg-ink-900 bg-sand-200 ease-in-out duration-500 transition-all"
+            : "flex flex-row md:flex-col w-full items-center justify-between h-full rounded overflow-clip border-1 border-sand-400 dark:border-pale-100 md:w-full md:items-start md:h-auto dark:bg-ink-900 bg-sand-200 font-jet ease-in-out duration-500 transition-all"
         }
       >
-        <nav className="flex flex-col" onClick={() => setMenuOpen(false)}>
+        <div>
+          <NavHeader
+            isSidebarCollapsed={isSidebarCollapsed}
+            menuOpen={menuOpen}
+            // matches={undefined}
+          />
+        </div>
+        <nav className="flex flex-col w-full ">
           {NavIndex.map((section) => {
             return (
-              <div className="w-auto">
+              <div
+                className={`${
+                  isSidebarCollapsed
+                    ? ""
+                    : "hidden md:flex md:flex-auto lg:inline-flex"
+                }`}
+              >
                 {" "}
                 {section.items.map((item) => (
-                  <GlobalNavItem item={item} />
+                  <GlobalNavItem
+                    item={item}
+                    isSidebarCollapsed={isSidebarCollapsed}
+                    className="hidden md:flex"
+                  />
                 ))}
               </div>
             );
           })}
         </nav>
+        <div onClick={handleNav} className="px-5 cursor-pointer md:hidden">
+          {menuOpen ? (
+            <Close className="w-6 h-auto dark:fill-pale-100 opacity-40 hover:opacity-90" />
+          ) : (
+            <Menu className="w-6 h-auto dark:fill-pale-100 opacity-40 hover:opacity-90" />
+          )}
+        </div>
+        <div
+          className={
+            menuOpen
+              ? "fixed mt-40 right-11 ease-in-out duration-300 z-20"
+              : "fixed mt-40 right-[-100%] ease-in-out duration-300 z-20"
+          }
+        >
+          <div className="flex md:hidden">
+            <ThemeSwitcher />
+          </div>
+        </div>
+        <div
+          className={
+            menuOpen
+              ? "fixed right-[88px] top-0 w-[calc(100vw-112px)] xs:w-auto my-6 h-fit md:hidden bg-sand-100 dark:bg-ink-900 bg-opacity-95 border-1 border-sand-400 ease-in-out duration-300 z-20"
+              : "fixed right-[-100%] top-0 w-[calc(100vw-112px)] xs:w-auto my-6 h-screen-1/2 md:hidden bg-sand-100 bg-opacity-95 border-1 border-sand-400 ease-in-out duration-500 z-20"
+          }
+        >
+          <nav className="flex flex-col " onClick={() => setMenuOpen(false)}>
+            {NavIndex.map((section) => {
+              return (
+                <div className="justify-start w-auto">
+                  {" "}
+                  {section.items.map((item) => (
+                    <GlobalNavItem item={item} />
+                  ))}
+                </div>
+              );
+            })}
+          </nav>
+        </div>
+        {/* {`(max-width:768px) matches: ${matches}`} */}
       </div>
     </div>
   );
 }
 
-function GlobalNavItem({ item }: { item: Item }) {
+function GlobalNavItem({ item, isSidebarCollapsed }: { item: Item }) {
   const segment = useSelectedLayoutSegment();
   const isActive = item.slug === segment;
+  const [isShown, setIsShown] = useState(false);
 
   return (
     <Link
       href={`/${item.slug}`}
+      onMouseEnter={() => setIsShown(true)}
+      onMouseLeave={() => setIsShown(false)}
       className={clsx(
-        "w-full flex flex-row gap-2 font-semibold text-sand-700 items-center px-4 py-4 hover:bg-stone-500/90 hover:text-sand-100",
+        " flex w-full flex-row font-semibold text-sand-700 dark:text-pale-100/30 items-center px-3 py-3 text-sm hover:bg-sand-300/90 hover:dark:bg-ink-800 hover:dark:text-pale-100 hover:text-stone-700",
         {
-          "bg-stone-500/90 hover:bg-stone-500/90 !text-sand-50": isActive,
+          "bg-sand-300/90 dark:bg-ink-800 hover:bg-sand-300/90 hover:dark:bg-ink-800 dark:!text-pale-100 !text-sand-700":
+            isActive,
         }
       )}
     >
-      <div className="w-4 h-4">{item.icon}</div>
+      <div className={isSidebarCollapsed ? "" : "pr-1"}>
+        <ArrowSelect className={isActive || isShown ? "block" : "hidden"} />
+      </div>
 
-      {item.name}
+      <div
+        className={
+          isSidebarCollapsed
+            ? "flex items-center justify-center w-full"
+            : "w-auto"
+        }
+      >
+        <div
+          className={isSidebarCollapsed ? "w-5 h-5 flex" : "w-[14px] h-[14px]"}
+        >
+          {item.icon}
+        </div>
+      </div>
+
+      <div className={isSidebarCollapsed ? "hidden" : "flex pl-2"}>
+        {" "}
+        {item.name}
+      </div>
     </Link>
   );
 }
