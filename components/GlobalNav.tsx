@@ -68,7 +68,7 @@ export function GlobalNav() {
               <div
                 className={`${
                   isSidebarCollapsed
-                    ? ""
+                    ? "flex"
                     : "hidden md:flex md:flex-auto lg:inline-flex"
                 }`}
               >
