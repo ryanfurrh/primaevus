@@ -146,11 +146,9 @@ function GlobalNavItem({
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
       className={clsx(
-        " flex w-full flex-row font-semibold text-sand-700 dark:text-pale-100/30 items-center px-3 py-3 text-sm hover:bg-sand-300/90 hover:dark:bg-ink-800 hover:dark:text-pale-100 hover:text-stone-700",
-        {
-          "bg-sand-300/90 dark:bg-ink-800 hover:bg-sand-300/90 hover:dark:bg-ink-800 dark:!text-pale-100 !text-sand-700":
-            isActive,
-        }
+        isActive
+          ? "flex w-full px-3 py-3 bg-sand-300/90 dark:bg-ink-800 hover:bg-sand-300/90 hover:dark:bg-ink-800 dark:!text-pale-100 !text-sand-700 items-center"
+          : "flex w-full flex-row font-semibold text-sand-700 dark:text-pale-100/30 items-center px-3 py-3 text-sm hover:bg-sand-300/90 hover:dark:bg-ink-800 hover:dark:text-pale-100 hover:text-stone-700"
       )}
     >
       <div className={isSidebarCollapsed ? "" : "pr-1"}>
