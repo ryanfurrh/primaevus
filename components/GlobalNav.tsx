@@ -151,7 +151,7 @@ function GlobalNavItem({
           : "flex w-full flex-row font-semibold text-sand-700 dark:text-pale-100/30 items-center px-3 py-3 text-sm hover:bg-sand-300/90 hover:dark:bg-ink-800 hover:dark:text-pale-100 hover:text-stone-700"
       )}
     >
-      <div className={isSidebarCollapsed ? "" : "pr-1"}>
+      <div className={isSidebarCollapsed ? "pr-0" : "pr-1"}>
         <ArrowSelect className={isActive || isShown ? "block" : "hidden"} />
       </div>
 
