@@ -89,9 +89,9 @@ export function GlobalNav() {
         </nav>
         <div onClick={handleNav} className="px-5 cursor-pointer md:hidden">
           {menuOpen ? (
-            <Close className="w-6 h-auto dark:fill-pale-100 opacity-40 hover:opacity-90" />
+            <Close className="w-6 h-auto dark:fill-pale-100 fill-stone-700 opacity-40 hover:opacity-80" />
           ) : (
-            <Menu className="w-6 h-auto dark:fill-pale-100 opacity-40 hover:opacity-90" />
+            <Menu className="w-6 h-auto dark:fill-pale-100 fill-stone-700 opacity-40 hover:opacity-80" />
           )}
         </div>
         <div
