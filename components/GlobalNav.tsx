@@ -46,7 +46,7 @@ export function GlobalNav() {
   return (
     <div className={`flex flex-row-reverse w-full md:w-auto gap-2 h-fit`}>
       <button
-        className="hidden w-4 h-4 md:flex"
+        className="hidden h-4 md:right-0 md:z-30 md:flex md:dark:text-pale-100 md:text-stone-700 opacity-40 hover:opacity-80"
         onClick={toggleSidebarCollapseHandler}
       >
         {" "}
