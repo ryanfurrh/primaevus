@@ -187,7 +187,7 @@ function NavHeader({ isSidebarCollapsed }: { isSidebarCollapsed: boolean }) {
     <div
       className={
         isSidebarCollapsed
-          ? "w-auto py-2 h-fit px-2 border-b-1 border-pale-100 bg-sand-100 dark:bg-ink-900 opacity-85"
+          ? "w-auto py-2 h-fit px-2 md:border-b-1 border-pale-100 bg-sand-100 dark:bg-ink-900 opacity-85"
           : "w-full px-3 py-2 text-center md:border-b-1 border-pale-100 md:px-5 md:py-4 bg-sand-100 dark:bg-ink-900 opacity-85"
       }
     >
