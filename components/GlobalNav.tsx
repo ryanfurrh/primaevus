@@ -72,14 +72,15 @@ export function GlobalNav() {
                     : "hidden md:flex md:flex-auto lg:inline-flex"
                 }`}
               >
-                {" "}
-                {section.items.map((item) => (
-                  <GlobalNavItem
-                    item={item}
-                    isSidebarCollapsed={isSidebarCollapsed}
-                    className="hidden md:flex"
-                  />
-                ))}
+                <div className="hidden w-full md:flex">
+                  {" "}
+                  {section.items.map((item) => (
+                    <GlobalNavItem
+                      item={item}
+                      isSidebarCollapsed={isSidebarCollapsed}
+                    />
+                  ))}
+                </div>
               </div>
             );
           })}
@@ -115,7 +116,7 @@ export function GlobalNav() {
                 <div className="justify-start w-auto">
                   {" "}
                   {section.items.map((item) => (
-                    <GlobalNavItem item={item} />
+                    <GlobalNavItem item={item} isSidebarCollapsed={false} />
                   ))}
                 </div>
               );
@@ -128,7 +129,13 @@ export function GlobalNav() {
   );
 }
 
-function GlobalNavItem({ item, isSidebarCollapsed }: { item: Item }) {
+function GlobalNavItem({
+  item,
+  isSidebarCollapsed,
+}: {
+  item: Item;
+  isSidebarCollapsed: boolean;
+}) {
   const segment = useSelectedLayoutSegment();
   const isActive = item.slug === segment;
   const [isShown, setIsShown] = useState(false);
@@ -172,7 +179,7 @@ function GlobalNavItem({ item, isSidebarCollapsed }: { item: Item }) {
   );
 }
 
-function NavHeader({ isSidebarCollapsed }) {
+function NavHeader({ isSidebarCollapsed }: { isSidebarCollapsed: boolean }) {
   const segment = useSelectedLayoutSegment();
   const isActive = null === segment;
 
