@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @layer utilities {
-    .font-stretch {
-        font-stretch: 125%;
-    }
+  .font-stretch {
+    font-stretch: 125%;
+  }
 }

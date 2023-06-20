@@ -1,15 +1,14 @@
 import { IconType } from "react-icons";
 import {
   ArtifactDatabaseIcon,
-  DeveloperLogIcon,
+  DocumentationIcon,
   FluxIcon,
+  PrimaeLogo,
   WorldIcon,
 } from "@/public/icons";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
-import { ReactComponentElement } from "react";
 
 export type Item = {
-  name: string;
+  name?: string;
   slug: string;
   description?: string;
   icon: any;
@@ -22,37 +21,37 @@ export const NavIndex: { items: Item[] }[] = [
         name: "Flux",
         slug: "flux",
         description: "string",
-        icon: <FluxIcon />,
+        icon: <FluxIcon className="w-full h-auto" />,
       },
     ],
   },
   {
     items: [
       {
-        name: "The World",
-        slug: "the-world",
+        name: "World",
+        slug: "world",
         description: "string",
-        icon: <WorldIcon />,
+        icon: <WorldIcon className="w-full h-auto" />,
       },
     ],
   },
   {
     items: [
       {
-        name: "Artifact Database",
-        slug: "artifact-database",
+        name: "Artifacts",
+        slug: "artifacts",
         description: "string",
-        icon: <ArtifactDatabaseIcon />,
+        icon: <ArtifactDatabaseIcon className="w-full h-auto" />,
       },
     ],
   },
   {
     items: [
       {
-        name: "Developer Log",
-        slug: "dev-log",
+        name: "Documentation",
+        slug: "documentation",
         description: "string",
-        icon: <DeveloperLogIcon />,
+        icon: <DocumentationIcon className="w-full h-auto" />,
       },
     ],
   },

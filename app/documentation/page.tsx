@@ -1,36 +1,35 @@
 import { PageHeader } from "@/components/PageHeader";
 import PostPreview from "@/components/PostPreview";
 import getPostMetadata from "@/components/getPostMetadata";
-import { DeveloperLogIcon } from "@/public/icons";
+import { DocumentationIcon } from "@/public/icons";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Developer Log",
+  title: "Documentation",
   description: "",
 };
 
-const DevLog = () => {
+const documentation = () => {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post) => (
     <PostPreview key={post.slug} {...post} />
   ));
 
   return (
-    <div className="max-w-4xl">
+    <div className="flex flex-col items-center justify-center w-full px-4">
       <div>
         <PageHeader
           name={metadata.title}
           description={metadata.description}
-          icon={<DeveloperLogIcon className="w-6 h-6" />}
+          icon={<DocumentationIcon className="w-6 h-6" />}
         />
       </div>
-      <div className="">
-        <div className="grid grid-cols-1 gap-4 px-4 justify-items-center md:justify-items-center lg:grid-cols-2 md:mx-16">
-          {postPreviews}
-        </div>
+
+      <div className="grid grid-cols-1 gap-4 px-4 mt-12 justify-items-center md:justify-items-center lg:grid-cols-2 md:mx-16">
+        {postPreviews}
       </div>
     </div>
   );
 };
 
-export default DevLog;
+export default documentation;

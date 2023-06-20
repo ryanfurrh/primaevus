@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="">
+    <div className="flex flex-col items-center justify-center w-full px-4">
       <div className="">
         <PageHeader
           name={metadata.title}
@@ -47,7 +47,7 @@ export default function Page() {
             alt={""}
             width={175}
             height={250}
-            className="mx-auto mt-12 border-2 border-sand-300 border-t-[10px] p-2 "
+            className="mx-auto mt-12 border-1 border-sand-300 border-t-[10px] p-2 "
           />
         </div>
       </div>

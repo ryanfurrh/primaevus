@@ -16,8 +16,9 @@ module.exports = {
         ibm: ['var(--font-ibm)', ...fontFamily.mono],
         marvin: ['var(--font-marvin)', ...fontFamily.sans],
         plexSans: ['var(--font-plex-sans)', ...fontFamily.sans],
-        orbitron: ['var(--font-orbitron)', ...fontFamily.sans],
-        archivo: ['var(--font-archivo)', ...fontFamily.sans]
+        archivo: ['var(--font-archivo)', ...fontFamily.sans],
+        jet: ['var(--font-jet)', ...fontFamily.mono]
+
       },
       typography: {
         DEFAULT: {
@@ -25,6 +26,12 @@ module.exports = {
             WebkitFontSmoothing: 'none',
           },
         },
+      },
+      width: {
+        '18': '72px'
+      },
+      borderWidth: {
+        '1': '1px',
       },
       colors: {
         'sand': {
@@ -40,6 +47,28 @@ module.exports = {
           900: "#353029",
           1000: "#23201b"
         },
+        'ink': {
+          800: "#262626",
+          900: "#101010"
+        },
+        'neptune': {
+          50: '#DBEDEA',
+          100: '#CDE6E2',
+          200: '#B2D8D2',
+          300: '#97CBC3',
+          400: '#7CBDB3',
+          500: '#57AA9D',
+          600: '#43867B',
+          700: '#306059',
+          800: '#1E3B36',
+          900: '#0B1614',
+        },
+        'bone': {
+          50: "#E4E5E4"
+        },
+        'pale': {
+          100: "#D6C3BA"
+        }
       },
       imageRendering: {
         pixelated: {
@@ -59,4 +88,5 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
   ],
+  darkMode: "class"
 }

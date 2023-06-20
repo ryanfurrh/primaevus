@@ -5,7 +5,7 @@ import getPostMetadata from "@/components/getPostMetadata";
 import { PageHeader } from "@/components/PageHeader";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
-import { DeveloperLogIcon } from "@/public/icons";
+import { ArrowLeft, DocumentationIcon } from "@/public/icons";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -23,7 +23,7 @@ export const generateStaticParams = async () => {
 };
 
 export const metadata = {
-  title: "Developer Log",
+  title: "Documentation",
   description: "",
 };
 
@@ -31,37 +31,36 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   return (
-    <div className="max-w-screen">
+    <div className="flex flex-col items-center justify-center w-full px-4 font-jet text-bone-50">
       <div className="mb-8 md:mb-12">
         <PageHeader
           name={metadata.title}
           description={metadata.description}
-          icon={<DeveloperLogIcon className="w-6 h-6" />}
+          icon={<DocumentationIcon className="w-6 h-6" />}
         />
       </div>
       <div className="flex flex-col md:flex-row ">
-        <Link href={"/dev-log"} className="px-2 md:px-6">
-          <img
-            src="/icons/backarrow.svg"
-            className="w-5 h-5 opacity-30 hover:opacity-80"
-          />
+        <Link href={"/documentation"} className="px-2 md:px-6">
+          <ArrowLeft />
         </Link>
-        <div className="h-full px-4 pt-4  md:p-0">
+        <div className="w-full h-full px-4 pt-4 md:p-0">
           <div className="mb-4">
-            <h3 className="text-sm font-semibold leading-none uppercase text-sand-400">
-              {post.data.subtitle}
-            </h3>
-            <h1 className="text-4xl font-bold leading-none md:text-2xl text-sand-600">
+            <div className="px-2 py-1 mb-1 rounded-sm md:mb-2 w-fit bg-sand-300/50 dark:bg-ink-800">
+              <h3 className="text-[10px] md:text-xs font-semibold leading-none uppercase text-sand-500 dark:text-bone-50/50">
+                {post.data.subtitle}
+              </h3>
+            </div>
+            <h1 className="text-4xl font-bold leading-none dark:text-pale-100 text-sand-600">
               <Balancer>{post.data.title}</Balancer>
             </h1>
-            <div className="flex flex-row gap-4 text-sm text-sand-400">
+            <div className="flex flex-row gap-4 mt-1 text-xs text-sand-400">
               <p>Entry #{post.data.entry}</p>
               <p>{post.data.date}</p>
             </div>
           </div>
 
-          <div className="h-24 border-2 border-sand-300 w-36"></div>
-          <article className="flex h-full prose-sm prose text-sand-900">
+          <div className="h-24 border-1 border-sand-300 w-36"></div>
+          <article className="flex h-full prose-sm prose dark:text-bone-50 text-sand-900 ">
             <Markdown>{post.content}</Markdown>
           </article>
         </div>

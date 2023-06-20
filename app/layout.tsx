@@ -1,14 +1,17 @@
 import "../styles/globals.css";
 import { GlobalNav } from "@/components/GlobalNav";
-import { NavHeader } from "@/components/NavHeader";
+
 import { Footer } from "@/components/Footer";
 import {
   Archivo,
   IBM_Plex_Mono,
   IBM_Plex_Sans,
+  JetBrains_Mono,
   Orbitron,
 } from "next/font/google";
 import localFont from "next/font/local";
+import Providers from "./providers";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata = {
   title: "Prīmaevus",
@@ -25,9 +28,10 @@ const archivo = Archivo({
   display: "swap",
 });
 
-const orbitron = Orbitron({
+const jet = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-orbitron",
+  variable: "--font-jet",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
 const plexSans = IBM_Plex_Sans({
@@ -57,20 +61,27 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${orbitron.variable}  font-ibm`}
+      className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${jet.variable} font-jet`}
     >
       <body
-        className="flex flex-col h-screen bg-sand-100 font-ibm"
+        className="flex flex-col w-full h-screen font-ibm bg-stone-50 dark:bg-ink-900"
         style={{ WebkitFontSmoothing: "none" }}
       >
-        <header className="z-10 flex border-2 md:fixed md:flex-col border-sand-400 font-ibm">
-          <NavHeader />
-          <GlobalNav />
-        </header>
-        <main className="flex flex-col flex-1 overflow-y-scroll md:pl-56">
-          <div className="flex justify-center flex-1">{children}</div>
-          <Footer />
-        </main>
+        <Providers>
+          <header className="flex flex-row">
+            <div className="z-10 flex justify-between w-full md:w-auto mt-6 mx-6 mb-0 md:h-[calc(100vh-3rem)] md:fixed md:flex-col font-jet ">
+              <GlobalNav />
+              <div className="hidden md:flex">
+                <ThemeSwitcher />
+              </div>
+            </div>
+          </header>
+
+          <main className="flex flex-col justify-between flex-1 h-full">
+            <div className="flex w-full md:pl-[124px]">{children}</div>
+            <Footer />
+          </main>
+        </Providers>
       </body>
     </html>
   );
