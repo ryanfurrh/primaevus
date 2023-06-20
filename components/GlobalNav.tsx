@@ -60,11 +60,7 @@ export function GlobalNav() {
         }
       >
         <div>
-          <NavHeader
-            isSidebarCollapsed={isSidebarCollapsed}
-            menuOpen={menuOpen}
-            // matches={undefined}
-          />
+          <NavHeader isSidebarCollapsed={isSidebarCollapsed} />
         </div>
         <nav className="flex flex-col w-full ">
           {NavIndex.map((section) => {
