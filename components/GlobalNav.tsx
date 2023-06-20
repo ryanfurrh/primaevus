@@ -25,6 +25,7 @@ export function GlobalNav() {
   //   setHideOnMobile(isMobile);
   // }, [isMobile]);
   const [menuOpen, setMenuOpen] = useState(false);
+
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
@@ -54,6 +55,7 @@ export function GlobalNav() {
         {" "}
         <ArrowLeft />
       </button>
+      {/* </div> */}
       <div
         className={
           isSidebarCollapsed
