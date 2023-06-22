@@ -86,7 +86,10 @@ module.exports = {
     imageRendering: ['responsive'],
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require('@tailwindcss/typography', '@tailwindcss-image-rendering'),
   ],
+  corePlugins: {
+    imageRendering: false,
+  },
   darkMode: "class"
 }
