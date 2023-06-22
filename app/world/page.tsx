@@ -47,13 +47,15 @@ export default function Page() {
             />
           </div>
           {/* <Counter /> */}
-          <Image
-            src={"/images/scavenger.jpg"}
-            alt={""}
-            width={612}
-            height={796}
-            className="image-rendering-pixelated bg-cover border-1 border-sand-300 border-t-[10px] p-4 max-w-xs mt-12"
-          />
+          <div className="pixelated">
+            <Image
+              src={"/images/scavenger.jpg"}
+              alt={""}
+              width={600}
+              height={796}
+              className="rendering-pixelated bg-cover border-1 border-sand-300 border-t-[10px] p-4 max-w-xs mt-12"
+            />
+          </div>
         </div>
       </div>
     </div>

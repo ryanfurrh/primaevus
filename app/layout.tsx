@@ -61,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${jet.variable} font-jet`}
+      className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${jet.variable} font-jet pixelated`}
     >
       <body
         className="flex flex-col w-full h-screen font-ibm bg-stone-50 dark:bg-ink-900"

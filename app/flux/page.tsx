@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="flex flex-col items-center justify-center w-full px-4">
+    <div className="flex flex-col items-center justify-center w-full px-4 rendering-pixelated">
       <div className="">
         <PageHeader
           name={metadata.title}
