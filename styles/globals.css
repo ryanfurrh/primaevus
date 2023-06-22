@@ -5,4 +5,7 @@
   .font-stretch {
     font-stretch: 125%;
   }
+  .pixelated {
+    image-rendering: pixelated;
+  }
 }
