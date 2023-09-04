@@ -1,4 +1,5 @@
 import { PageHeader } from "@/components/PageHeader";
+import { CubeFiber } from "@/components/flux/CubeFiber";
 import { FluxIcon } from "@/public/icons";
 import Image from "next/image";
 
@@ -42,6 +43,10 @@ export default function Page() {
               className="shrink-0"
             />
           </div>
+          <div>
+            <CubeFiber />
+          </div>
+
           <Image
             src="/images/flux-illustration-1.svg"
             alt={""}
