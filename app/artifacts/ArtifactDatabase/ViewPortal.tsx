@@ -27,7 +27,7 @@ export function ViewPortal() {
     (artifact) => artifact.name === selectedArtifact
   );
   const Model = () => {
-    const gltf = useLoader(GLTFLoader, `/${selectedArtifactData.file}`);
+    const gltf = useLoader(GLTFLoader, `/${selectedArtifactData?.file}`);
     const meshRef = useRef<Mesh>(null);
     useFrame(() => {
       if (!meshRef.current) {
@@ -38,7 +38,7 @@ export function ViewPortal() {
     return (
       <>
         <mesh
-          scale={selectedArtifactData.scale}
+          scale={selectedArtifactData?.scale}
           ref={meshRef}
           receiveShadow
           castShadow
