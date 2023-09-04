@@ -5,7 +5,7 @@ import { CloseIcon, PrimaeLogo, PrimaeLogoMinimal } from "@/public/icons";
 import Image from "next/image";
 import { Suspense } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, Grid, OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 // export const metadata = {
@@ -15,10 +15,15 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export default function HomePage() {
   const Model = () => {
-    const gltf = useLoader(GLTFLoader, "/models/computer1/scene.gltf");
+    const gltf = useLoader(GLTFLoader, "/models/computer1/computer1.gltf");
     return (
       <>
-        <primitive object={gltf.scene} scale={0.18} />
+        <primitive
+          object={gltf.scene}
+          position={[0, -0.5, 0]}
+          rotation={[0, 0, 0]}
+          scale={1.1}
+        />
       </>
     );
   };
@@ -34,42 +39,14 @@ export default function HomePage() {
       </div>
       <div className="flex flex-col items-center w-full max-w-lg">
         <h1 className="mb-4 text-center font-jet">hello world.</h1>
-        <div className="flex justify-center w-full mx-auto mb-[-48px] md:mb-[-72px]">
-          <div className="z-10 flex flex-col w-full max-w-[300px] md:max-w-sm center bg-sand-200 border-sand-400">
-            <div className="flex max-w-lg justify-items-end place-content-start bg-sand-400">
-              <CloseIcon className=" fill-sand-700 bg-sand-200 hover:fill-sand-900 hover:bg-sand-50 hover:cursor-pointer" />
-            </div>
 
-            <div className="z-10 flex justify-center h-auto gap-4 py-4 px-4 md:py-8 border-x-[1px] border-b-[1px] md:gap-9 border-sand-400 max-w-lg">
-              <Image
-                src="/gifs/construction-1.gif"
-                alt={""}
-                width={48}
-                height={48}
-                className="shrink-0"
-              />
-              <h1 className="text-teal-600 text-sm font-semibold tracking-[.3rem] text-center">
-                UNDER
-                <br />
-                CONSTRUCTION
-              </h1>
-              <Image
-                src="/gifs/construction-1.gif"
-                alt={""}
-                width={48}
-                height={48}
-                className="shrink-0"
-              />
-            </div>
-          </div>
-        </div>
         <div className="relative flex w-full h-auto">
           <Image
             src="/gifs/dot-grid-movement.gif"
             alt={""}
             width={500}
             height={500}
-            className="absolute flex z-[-1] w-full right-[-4]"
+            className="absolute flex -z-10 w-full right-[0]"
           />
         </div>
 
