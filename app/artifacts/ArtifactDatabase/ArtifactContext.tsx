@@ -11,7 +11,7 @@ const ArtifactContext = createContext<ArtifactContextValue | undefined>(
   undefined
 );
 
-export function ArtifactProvider({ children }) {
+export function ArtifactProvider({ children }: { children: any }) {
   const [selectedArtifact, setSelectedArtifact] = useState(
     ArtifactIndex[0].name
   );
