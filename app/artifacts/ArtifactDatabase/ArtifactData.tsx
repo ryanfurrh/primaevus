@@ -15,19 +15,19 @@ export function ArtifactData() {
           <span className="text-base font-semibold uppercase opacity-40">
             Name:
           </span>{" "}
-          {selectedArtifactData.name}
+          {selectedArtifactData?.name}
         </li>
         <li>
           <span className="text-base font-semibold uppercase opacity-40">
             Date of Disclosure:{" "}
           </span>{" "}
-          {selectedArtifactData.date}
+          {selectedArtifactData?.date}
         </li>
         <p>
           <span className="text-base font-semibold uppercase opacity-40">
             Usage:{" "}
           </span>{" "}
-          {selectedArtifactData.use}
+          {selectedArtifactData?.use}
         </p>
       </ul>
     </div>
