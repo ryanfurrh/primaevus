@@ -13,13 +13,15 @@ export function ArtifactSelector() {
     setOpen((prev) => !prev);
   };
   return (
-    <div className="relative w-full h-auto px-2 py-2 ">
+    <div className="relative w-full h-auto py-2">
       <div
         onClick={handleOpen}
-        className="flex flex-row w-full px-2 place-items-center dark:border-pale-100 border-1 hover:cursor-pointer"
+        className="flex flex-row w-full px-2 place-items-center dark:border-pale-100/50 bg-ink-800 border-1 hover:cursor-pointer"
       >
-        <h1 className="justify-between w-full text-left">{selectedArtifact}</h1>
-        <ArrowY />
+        <h1 className="justify-between w-full py-0.5 pr-2 text-xs text-left md:h-auto md:text-sm text-neptune-500/70">
+          Select Artifact
+        </h1>
+        <ArrowY className="text-neptune-600" />
       </div>
       <div className="relative w-full">
         <div
