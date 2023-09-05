@@ -55,7 +55,7 @@ export function ViewPortal() {
   };
 
   return (
-    <div className="w-full h-[50vh] md:h-[calc(100vh-138px)] border-1 dark:border-pale-100 font-jet">
+    <div className="w-full h-[50vh] md:h-[calc(100vh-186px)] border-1 dark:border-pale-100 font-jet">
       <Canvas
         shadows
         orthographic

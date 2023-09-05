@@ -49,7 +49,7 @@ export default function TensionMonitor() {
   };
 
   return (
-    <div className="w-full h-full border-t-1 border-b-1 dark:border-pale-100 font-jet">
+    <div className="flex w-full h-full border-t-1 border-b-1 dark:border-pale-100 font-jet">
       <Canvas
         shadows
         orthographic
