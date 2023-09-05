@@ -30,7 +30,6 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col w-full lg:w-[300px] dark:border-pale-100/30 border-1">
-            <ArtifactSelector />
             <ArtifactData />
             <div className="relative flex flex-col h-full">
               <div className="absolute z-10 flex w-full px-4 py-1 text-sm font-extrabold uppercase border-white border-1 text-pale-100 dark:bg-ink-800">
