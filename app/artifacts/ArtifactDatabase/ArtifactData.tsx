@@ -9,13 +9,12 @@ export function ArtifactData() {
     (artifact) => artifact.name === selectedArtifact
   );
   return (
-    <div className="w-full px-4 py-4">
+    <div className="w-full px-4 py-8">
       <ul className="flex flex-col gap-4">
         <li>
-          <span className="text-base font-semibold uppercase opacity-40">
-            Name:
-          </span>{" "}
-          {selectedArtifactData?.name}
+          <h1 className="font-black text-neptune-400/70 text-[28px] leading-none uppercase font-archivo">
+            {selectedArtifactData?.name}
+          </h1>
         </li>
         <li>
           <span className="text-base font-semibold uppercase opacity-40">
