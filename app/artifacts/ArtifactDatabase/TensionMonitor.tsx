@@ -34,7 +34,7 @@ export default function TensionMonitor() {
         <mesh scale={1} receiveShadow castShadow>
           <primitive
             object={gltf.scene}
-            position={[0, 1, 0]}
+            position={[0, -0.7, 0]}
             rotation={[0, 0, 0]}
           />
           <meshStandardMaterial wireframe color="white" />
@@ -50,7 +50,7 @@ export default function TensionMonitor() {
         orthographic
         camera={{
           position: [12, 0, 12],
-          zoom: 80,
+          zoom: 130,
           left: -2,
           right: 2,
           top: 2,
@@ -67,8 +67,8 @@ export default function TensionMonitor() {
           <Model />
         </Suspense>
         <OrbitControls
-          target={[0, 1, 0]}
-          enableZoom={true}
+          target={[0, 0, 0]}
+          enableZoom={false}
           autoRotate
           autoRotateSpeed={5}
           minPolarAngle={Math.PI / 2}
