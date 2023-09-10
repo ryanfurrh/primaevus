@@ -58,7 +58,7 @@ export default function TensionMonitor() {
           near: 1,
         }}
         gl={{ antialias: false }}
-        dpr={0.35}
+        dpr={0.3}
       >
         <ambientLight intensity={0.1} />
         <directionalLight color="blue" position={[0, 1, 3]} intensity={-500} />
