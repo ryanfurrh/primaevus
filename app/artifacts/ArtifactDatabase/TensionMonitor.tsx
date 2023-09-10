@@ -27,11 +27,6 @@ import { useArtifact } from "./ArtifactContext";
 import { ArtifactIndex } from "./ArtifactIndex";
 
 export default function TensionMonitor() {
-  // const wireframeMaterial = new LineBasicMaterial({
-  //   color: 0xffffff,
-  //   linewidth: 2,
-  // });
-
   const Model = () => {
     const gltf = useLoader(GLTFLoader, "/models/wave-form-1/scene.gltf");
     return (
@@ -39,7 +34,7 @@ export default function TensionMonitor() {
         <mesh scale={1} receiveShadow castShadow>
           <primitive
             object={gltf.scene}
-            position={[0, 1, 0]}
+            position={[0, -0.7, 0]}
             rotation={[0, 0, 0]}
           />
           <meshStandardMaterial wireframe color="white" />
@@ -49,13 +44,16 @@ export default function TensionMonitor() {
   };
 
   return (
-    <div className="flex w-full h-full border-t-1 border-b-1 dark:border-pale-100 font-jet">
+    <div className="absolute flex w-full h-full font-jet">
+      <h3 className="absolute w-[calc(100%-32px)] px-1 py-1 text-sm font-semibold tracking-wider top-4 left-4 bg-neptune-800/50 text-neptune-400">
+        Tension Monitor
+      </h3>
       <Canvas
         shadows
         orthographic
         camera={{
           position: [12, 0, 12],
-          zoom: 80,
+          zoom: 130,
           left: -2,
           right: 2,
           top: 2,
@@ -63,7 +61,7 @@ export default function TensionMonitor() {
           near: 1,
         }}
         gl={{ antialias: false }}
-        dpr={0.35}
+        dpr={0.3}
       >
         <ambientLight intensity={0.1} />
         <directionalLight color="blue" position={[0, 1, 3]} intensity={-500} />
@@ -72,8 +70,8 @@ export default function TensionMonitor() {
           <Model />
         </Suspense>
         <OrbitControls
-          target={[0, 1, 0]}
-          enableZoom={true}
+          target={[0, 0, 0]}
+          enableZoom={false}
           autoRotate
           autoRotateSpeed={5}
           minPolarAngle={Math.PI / 2}

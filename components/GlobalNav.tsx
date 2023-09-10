@@ -60,7 +60,7 @@ export function GlobalNav() {
         className={
           isSidebarCollapsed
             ? "flex flex-row md:flex-col w-full items-center justify-between border-1 border-sand-400 rounded dark:border-pale-100 dark:bg-ink-900 bg-sand-200 ease-in-out duration-500 transition-all"
-            : "flex flex-row md:flex-col w-full items-center justify-between h-full rounded overflow-clip border-1 border-sand-400 dark:border-pale-100 md:w-full md:items-start md:h-auto dark:bg-ink-900 bg-sand-200 font-jet ease-in-out duration-500 transition-all"
+            : "flex flex-row md:flex-col w-full items-center justify-between border-1 h-full rounded overflow-clip  border-sand-400 dark:border-pale-100 md:w-full md:items-start md:h-auto dark:bg-ink-900 bg-sand-200 font-jet ease-in-out duration-500 transition-all"
         }
       >
         <div>
@@ -189,8 +189,8 @@ function NavHeader({ isSidebarCollapsed }: { isSidebarCollapsed: boolean }) {
     <div
       className={
         isSidebarCollapsed
-          ? "w-auto py-2 h-fit px-2 md:border-b-1 border-pale-100 bg-sand-100 dark:bg-ink-900 opacity-85"
-          : "w-full px-3 py-2 text-center md:border-b-1 border-pale-100 md:px-5 md:py-4 bg-sand-100 dark:bg-ink-900 opacity-85"
+          ? "w-full px-3 py-3 h-fit md:border-b-1 border-pale-400 md:py-5 md:px-5 bg-sand-100 dark:bg-ink-900 opacity-85"
+          : "w-full px-3 py-3 text-center md:border-b-1 border-pale-100 md:px-5 md:py-5 bg-sand-100 dark:bg-ink-900 opacity-85"
       }
     >
       <Link
@@ -201,7 +201,7 @@ function NavHeader({ isSidebarCollapsed }: { isSidebarCollapsed: boolean }) {
         <div
           className={
             isSidebarCollapsed
-              ? "flex justify-center px-1 py-1 md:p-3 border-1 rounded-lg hover:mt-1 border-stone-400 dark:border-pale-100/20 bg-sand-200 dark:bg-ink-900 hover:-translate-y-1.5 hover:border-b-[6px] transition-all"
+              ? "flex justify-center px-2 py-2 md:p-3 border-1 rounded-lg hover:mt-1 border-stone-400 dark:border-pale-100/20 bg-sand-200 dark:bg-ink-900 hover:-translate-y-1.5 hover:border-b-[6px] transition-all"
               : "flex md:flex-col justify-center gap-2 px-1 py-2 md:p-4 border-1 rounded-lg hover:mt-1 border-stone-400 dark:border-pale-100/20 bg-sand-200 dark:bg-ink-900 hover:-translate-y-1.5 hover:border-b-[6px] transition-all"
           }
         >

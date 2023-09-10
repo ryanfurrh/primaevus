@@ -45,7 +45,7 @@ export function ViewPortal() {
         >
           <primitive
             object={gltf.scene}
-            position={[0, 0.5, 0]}
+            position={[0, 0.4, 0]}
             rotation={[0.2, 0.2, 0.5]}
           />
           <meshStandardMaterial />
@@ -55,7 +55,7 @@ export function ViewPortal() {
   };
 
   return (
-    <div className="w-full h-[50vh] md:h-[calc(100vh-186px)] border-1 dark:border-pale-100 font-jet">
+    <div className="absolute flex w-full h-full font-jet">
       <Canvas
         shadows
         orthographic
@@ -63,7 +63,7 @@ export function ViewPortal() {
           position: [15, 15, 20],
           zoom: 100,
           left: -2,
-          right: 2,
+          right: -2,
           top: 2,
           bottom: 2,
           near: 1,

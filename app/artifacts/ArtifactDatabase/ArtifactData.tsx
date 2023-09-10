@@ -9,26 +9,24 @@ export function ArtifactData() {
     (artifact) => artifact.name === selectedArtifact
   );
   return (
-    <div className="w-full px-4 py-8">
-      <ul className="flex flex-col gap-4">
-        <li>
-          <h1 className="font-black text-neptune-400/70 text-[28px] leading-none uppercase font-archivo">
-            {selectedArtifactData?.name}
-          </h1>
-        </li>
-        <li>
-          <span className="text-base font-semibold uppercase opacity-40">
-            Date of Disclosure:{" "}
-          </span>{" "}
-          {selectedArtifactData?.date}
-        </li>
-        <p>
-          <span className="text-base font-semibold uppercase opacity-40">
-            Usage:{" "}
-          </span>{" "}
-          {selectedArtifactData?.use}
-        </p>
-      </ul>
+    <div className="flex flex-col gap-4 px-4 py-8">
+      <h1 className="font-black text-neptune-400/70 text-[28px] leading-none uppercase font-archivo pb-2">
+        {selectedArtifactData?.name}
+      </h1>
+      <div className="flex flex-col gap-2">
+        <h3 className="px-1 py-1 text-xs font-semibold tracking-wider bg-neptune-800/50 text-neptune-400">
+          Disclosure Date:
+        </h3>
+        <p className="text-xs">{selectedArtifactData?.date}</p>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h3 className="px-1 py-1 text-xs font-semibold tracking-wider bg-neptune-800/50 text-neptune-400">
+          Usage:
+        </h3>
+        <div className="flex flex-shrink overflow-hidden overflow-y-scroll max-h-36 text-ellipsis">
+          <p className="flex-grow text-xs">{selectedArtifactData?.use}</p>
+        </div>
+      </div>
     </div>
   );
 }
