@@ -27,11 +27,6 @@ import { useArtifact } from "./ArtifactContext";
 import { ArtifactIndex } from "./ArtifactIndex";
 
 export default function TensionMonitor() {
-  // const wireframeMaterial = new LineBasicMaterial({
-  //   color: 0xffffff,
-  //   linewidth: 2,
-  // });
-
   const Model = () => {
     const gltf = useLoader(GLTFLoader, "/models/wave-form-1/scene.gltf");
     return (
