@@ -45,7 +45,7 @@ export function ViewPortal() {
         >
           <primitive
             object={gltf.scene}
-            position={[0, 0.5, 0]}
+            position={[0, 0.4, 0]}
             rotation={[0.2, 0.2, 0.5]}
           />
           <meshStandardMaterial />
