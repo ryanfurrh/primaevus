@@ -10,7 +10,7 @@ export const ArtifactIndex: {
     file: "models/personal_computer/scene2.gltf",
     scale: 3.5,
     date: "2023/05/15",
-    use: "Proximum proficere consentit Mario emergant mares eandem cruciatus Rome clarus. Exoriens dispersa interlunio decidant Scipionibus.  ",
+    use: "Proximum proficere consentit Mario emergant mares eandem cruciatus Rome clarus. Exoriens dispersa interlunio decidant Scipionibus.  Proximum proficere consentit Mario emergant mares eandem cruciatus Rome clarus. Exoriens dispersa interlunio decidant Scipionibus. Proximum proficere consentit Mario emergant mares eandem cruciatus Rome clarus. Exoriens dispersa interlunio decidant Scipionibus.",
   },
 
   {
@@ -24,7 +24,7 @@ export const ArtifactIndex: {
   {
     name: "Artifact C",
     file: "models/satellitedish/satellitedish.gltf",
-    scale: 2,
+    scale: 2.5,
     date: "2023/05/15",
     use: "Inclusa litus altitudinum subsolanus lumen stationes.  Invalida Porcio apsides admixtis.  Derasidas totus duas mutata.  Septentrio subiacet transgressis. ",
   },
