@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import { GlobalNav } from "@/components/GlobalNav";
 
 import { Footer } from "@/components/Footer";
@@ -85,7 +86,10 @@ export default function RootLayout({
           </header>
 
           <main className="flex flex-col justify-between flex-1 h-full">
-            <div className="flex w-full md:pl-[124px]">{children}</div>
+            <div className="flex w-full md:pl-[124px]">
+              {children}
+              <Analytics />
+            </div>
             <Footer />
           </main>
         </Providers>
