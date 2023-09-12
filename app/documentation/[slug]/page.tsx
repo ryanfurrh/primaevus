@@ -31,7 +31,7 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   return (
-    <div className="flex flex-col items-center justify-center w-full px-4 font-jet text-bone-50">
+    <div className="flex flex-col items-center justify-center w-full px-4 font-jet text-pale-100">
       <div className="mb-8 md:mb-12">
         <PageHeader
           name={metadata.title}
@@ -61,7 +61,24 @@ const PostPage = (props: any) => {
 
           <div className="h-24 border-1 border-sand-300 w-36"></div>
           <article className="flex h-full prose-sm prose dark:text-bone-50 text-sand-900 ">
-            <Markdown>{post.content}</Markdown>
+            <Markdown
+              options={{
+                overrides: {
+                  h2: {
+                    props: {
+                      className: "dark:text-neptune-600",
+                    },
+                  },
+                  strong: {
+                    props: {
+                      className: "dark:text-neptune-500",
+                    },
+                  },
+                },
+              }}
+            >
+              {post.content}
+            </Markdown>
           </article>
         </div>
       </div>

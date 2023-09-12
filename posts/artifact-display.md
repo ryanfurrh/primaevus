@@ -15,7 +15,7 @@ The first component to unlocking access into this new realm is an artifact datab
 
 ## The Node Map
 
-`A complex web` of all artifacts in their relation to each other, and to the source node. All artifacts stem from the same origin point, but their distances can vary. Like the immense pressure the weight of the earth has on it's core (5 sextillion tons), the closer an artifact is to the source node, the higher the pressure and the lower it's stability.
+A complex web of all artifacts in their relation to each other, and to the source node. All artifacts stem from the same origin point, but their distances can vary. Like the immense pressure the weight of the earth has on it's core (5 sextillion tons), the closer an artifact is to the source node, the higher the pressure and the lower it's stability.
 
 ## Waveform Display
 
