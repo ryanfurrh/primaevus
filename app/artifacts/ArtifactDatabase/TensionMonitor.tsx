@@ -53,7 +53,7 @@ export default function TensionMonitor() {
         orthographic
         camera={{
           position: [12, 0, 12],
-          zoom: 130,
+          zoom: 110,
           left: -2,
           right: 2,
           top: 2,
@@ -64,7 +64,7 @@ export default function TensionMonitor() {
         dpr={0.3}
       >
         <ambientLight intensity={0.1} />
-        <directionalLight color="blue" position={[0, 1, 3]} intensity={-500} />
+        <directionalLight color="cyan" position={[0, 1, 3]} intensity={10} />
         <pointLight position={[10, 2, 15]} intensity={1} />
         <Suspense fallback={<Loader />}>
           <Model />
@@ -77,7 +77,6 @@ export default function TensionMonitor() {
           minPolarAngle={Math.PI / 2}
           maxPolarAngle={Math.PI / 2}
         />
-        <fog />
       </Canvas>
     </div>
   );
