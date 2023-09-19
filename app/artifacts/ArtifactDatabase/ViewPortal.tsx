@@ -3,6 +3,7 @@
 import { blue, green, lightGreen } from "@mui/material/colors";
 import {
   AsciiRenderer,
+  Bounds,
   CameraControls,
   Environment,
   Grid,
@@ -37,19 +38,26 @@ export function ViewPortal() {
 
     return (
       <>
-        <mesh
-          scale={selectedArtifactData?.scale}
-          ref={meshRef}
-          receiveShadow
-          castShadow
+        <Bounds
+          fit
+          margin={selectedArtifactData?.margin || 1.4}
+          clip
+          damping={8}
         >
-          <primitive
-            object={gltf.scene}
-            position={[0, 0.4, 0]}
-            rotation={[0.2, 0.2, 0.5]}
-          />
-          <meshStandardMaterial />
-        </mesh>
+          <mesh
+            scale={selectedArtifactData?.scale}
+            ref={meshRef}
+            receiveShadow
+            castShadow
+          >
+            <primitive
+              object={gltf.scene}
+              position={selectedArtifactData?.position || [0, 0.4, 0]}
+              rotation={selectedArtifactData?.rotation}
+            />
+            <meshStandardMaterial />
+          </mesh>
+        </Bounds>
       </>
     );
   };
@@ -61,7 +69,7 @@ export function ViewPortal() {
         orthographic
         camera={{
           position: [15, 15, 20],
-          zoom: 100,
+          zoom: 140,
           left: -2,
           right: -2,
           top: 2,
@@ -69,7 +77,7 @@ export function ViewPortal() {
           near: 1,
         }}
         gl={{ logarithmicDepthBuffer: true, antialias: false }}
-        dpr={0.4}
+        dpr={0.45}
       >
         <ambientLight intensity={0.5} />
         <directionalLight color="cyan" position={[0, 20, 3]} intensity={5} />
@@ -92,6 +100,7 @@ export function ViewPortal() {
           enableZoom={false}
           minPolarAngle={Math.PI / 3}
           maxPolarAngle={Math.PI / 2.1}
+          makeDefault
         />
         <fog />
       </Canvas>
