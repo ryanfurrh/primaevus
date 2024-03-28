@@ -12,13 +12,13 @@
 
 @layer components {
   .scrollbar::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
+    width: 4px;
+    height: 4px;
   }
 
   .scrollbar::-webkit-scrollbar-track {
     border-radius: 100vh;
-    background: #f7f4ed;
+    background: dimgray;
   }
 
   .scrollbar::-webkit-scrollbar-thumb {

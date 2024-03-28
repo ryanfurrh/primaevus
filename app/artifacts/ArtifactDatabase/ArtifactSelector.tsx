@@ -18,14 +18,14 @@ export function ArtifactSelector() {
         onClick={handleOpen}
         className="flex flex-row w-full px-2 place-items-center dark:border-pale-100/50 bg-ink-800 border-1 hover:cursor-pointer"
       >
-        <h1 className="justify-between w-full py-0.5 pr-2 text-xs text-left md:h-auto md:text-sm text-neptune-500/70">
+        <h1 className="sm:visible  justify-between w-full py-0.5 pr-2 text-xs text-left md:h-auto md:text-sm text-neptune-500/70">
           Select Artifact
         </h1>
         <ArrowY className="text-neptune-600" />
       </div>
       <div className="relative w-full">
         <div
-          className={`absolute z-10 flex w-full px-2 py-2 place-items-center border-pale-100 border-1 bg-ink-800 ${
+          className={`absolute right-0 md:left-0 z-10 flex w-52 px-2 py-2 place-items-center border-pale-100 border-1 bg-ink-800 ${
             open
               ? "opacity-100 transition-all duration-200 h-auto overflow-hidden"
               : "opacity-0 transition-all duration-200 overflow-hidden"
