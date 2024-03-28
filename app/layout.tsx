@@ -14,6 +14,7 @@ import localFont from "next/font/local";
 import Providers from "./providers";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Version from "@/components/Version";
+import { ArtifactProvider } from "./artifacts/ArtifactDatabase/ArtifactContext";
 
 export const metadata = {
   title: "primae",
@@ -27,7 +28,6 @@ const archivo = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",
   axes: ["wdth"],
-  display: "swap",
 });
 
 const jet = JetBrains_Mono({
@@ -63,37 +63,39 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${jet.variable} font-jet pixelated`}
+      className={`${ibm.variable} ${archivo.variable} ${marvin.variable} ${plexSans.variable} ${jet.variable} pixelated`}
     >
-      <body
-        className="flex flex-col w-full h-screen font-ibm bg-stone-50 dark:bg-ink-900"
-        style={{ WebkitFontSmoothing: "none" }}
-      >
-        <Providers>
-          <header className="flex flex-row">
-            <div className="z-10 flex justify-between w-full md:w-auto mt-6 mx-6 mb-0 md:h-[calc(100vh-3rem)] md:fixed md:flex-col font-jet ">
-              <GlobalNav />
+      <ArtifactProvider>
+        <body
+          className="flex flex-col w-full h-screen font-archivo bg-stone-50 dark:bg-ink-900"
+          style={{ WebkitFontSmoothing: "none" }}
+        >
+          <Providers>
+            <header className="flex flex-row">
+              <div className="z-10 flex justify-between w-full md:w-auto mt-6 mx-6 mb-0 md:h-[calc(100vh-3rem)] md:fixed md:flex-col font-archivo ">
+                <GlobalNav />
 
-              <div className="flex flex-col gap-4">
-                <div className="hidden md:flex">
-                  <ThemeSwitcher />
-                </div>
-                <div className="hidden md:flex">
-                  <Version />
+                <div className="flex flex-col gap-4">
+                  <div className="hidden md:flex">
+                    <ThemeSwitcher />
+                  </div>
+                  <div className="hidden md:flex">
+                    <Version />
+                  </div>
                 </div>
               </div>
-            </div>
-          </header>
+            </header>
 
-          <main className="flex flex-col justify-between flex-1 h-full">
-            <div className="flex w-full md:pl-[124px]">
-              {children}
-              <Analytics />
-            </div>
-            <Footer />
-          </main>
-        </Providers>
-      </body>
+            <main className="flex flex-col justify-between flex-1 h-full">
+              <div className="flex w-full md:pl-[124px]">
+                {children}
+                <Analytics />
+              </div>
+              <Footer />
+            </main>
+          </Providers>
+        </body>
+      </ArtifactProvider>
     </html>
   );
 }

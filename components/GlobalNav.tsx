@@ -60,7 +60,7 @@ export function GlobalNav() {
         className={
           isSidebarCollapsed
             ? "flex flex-row md:flex-col w-full items-center justify-between border-1 border-sand-400 rounded dark:border-pale-100 dark:bg-ink-900 bg-sand-200 ease-in-out duration-500 transition-all"
-            : "flex flex-row md:flex-col w-full items-center justify-between border-1 h-full rounded overflow-clip  border-sand-400 dark:border-pale-100 md:w-full md:items-start md:h-auto dark:bg-ink-900 bg-sand-200 font-jet ease-in-out duration-500 transition-all"
+            : "flex flex-row md:flex-col w-full items-center justify-between border-1 h-full rounded overflow-clip  border-sand-400 dark:border-pale-100 md:w-full md:items-start md:h-auto dark:bg-ink-900 bg-sand-200 ease-in-out duration-500 transition-all"
         }
       >
         <div>
@@ -189,8 +189,8 @@ function NavHeader({ isSidebarCollapsed }: { isSidebarCollapsed: boolean }) {
     <div
       className={
         isSidebarCollapsed
-          ? "w-full px-3 py-3 h-fit md:border-b-1 border-pale-400 md:py-5 md:px-5 bg-sand-100 dark:bg-ink-900 opacity-85"
-          : "w-full px-3 py-3 text-center md:border-b-1 border-pale-100 md:px-5 md:py-5 bg-sand-100 dark:bg-ink-900 opacity-85"
+          ? "w-full px-3 py-3 h-fit md:border-b-1 border-pale-400 md:py-5 md:px-5 bg-sand-100 dark:bg-ink-900 opacity-85 font-archivo"
+          : "w-full px-3 py-3 text-center md:border-b-1 border-pale-100 md:px-5 md:py-5 bg-sand-100 dark:bg-ink-900 opacity-85 font-archivo"
       }
     >
       <Link
@@ -225,10 +225,10 @@ function NavHeader({ isSidebarCollapsed }: { isSidebarCollapsed: boolean }) {
               className={
                 isSidebarCollapsed
                   ? "hidden"
-                  : "text-lg font-extrabold leading-[1.125rem] md:text-[24px] dark:text-inherit font-archivo font-stretch md:flex hidden"
+                  : "text-lg font-extrabold leading-[1.125rem] md:text-[24px] dark:text-inherit font-stretch md:flex hidden"
               }
             >
-              Primæ
+              primæ
             </h1>
           </div>
         </div>

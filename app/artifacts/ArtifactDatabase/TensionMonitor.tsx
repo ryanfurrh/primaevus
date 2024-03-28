@@ -27,6 +27,10 @@ import { useArtifact } from "./ArtifactContext";
 import { ArtifactIndex } from "./ArtifactIndex";
 
 export default function TensionMonitor() {
+  const { selectedArtifact } = useArtifact();
+  const selectedArtifactData = ArtifactIndex.find(
+    (artifact) => artifact.name === selectedArtifact
+  );
   const Model = () => {
     const gltf = useLoader(GLTFLoader, "/models/wave-form-1/scene.gltf");
     return (
@@ -44,7 +48,13 @@ export default function TensionMonitor() {
   };
 
   return (
-    <div className="absolute flex w-full h-full font-jet">
+    <div
+      className={`${
+        selectedArtifact === "Welcome"
+          ? "hidden"
+          : "absolute flex w-full h-full font-jet"
+      }`}
+    >
       <h3 className="absolute w-[calc(100%-32px)] px-1 py-1 text-sm font-semibold tracking-wider top-4 left-4 bg-neptune-800/50 text-neptune-400">
         Tension Monitor
       </h3>

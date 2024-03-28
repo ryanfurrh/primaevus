@@ -9,8 +9,14 @@ export function ArtifactData() {
     (artifact) => artifact.name === selectedArtifact
   );
   return (
-    <div className="flex flex-col gap-4 px-4 py-8">
-      <h1 className="font-black text-neptune-400/70 text-[28px] leading-none uppercase font-archivo pb-2">
+    <div
+      className={`${
+        selectedArtifact === "Welcome"
+          ? "hidden"
+          : "flex flex-col gap-4 px-4 py-8"
+      } `}
+    >
+      <h1 className="font-black text-neptune-400/70 text-[28px] leading-none uppercase font-archivo  pb-2">
         {selectedArtifactData?.name}
       </h1>
       <div className="flex flex-col gap-2">
