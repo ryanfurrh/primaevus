@@ -32,28 +32,16 @@ export default function Page() {
       <ArtifactProvider>
         <div className="relative w-full md:w-3/4 h-auto md:h-[calc(100vh-186px)] max-h-[900px] flex flex-col">
           <WindowHeader />
-          {selectedArtifact}
-          <div
-            className={` ${
-              selectedArtifact === "Welcome"
-                ? "relative flex flex-col-reverse w-full h-full border-t-0 border-1 scrollbar dark:border-pale-100"
-                : "relative flex flex-col-reverse w-full h-full border-t-0 md:flex-row-reverse md:grid-cols-3 border-1 scrollbar dark:border-pale-100"
-            } `}
-          >
-            <div
-              className={` ${
-                selectedArtifact === "Welcome"
-                  ? "hidden"
-                  : "flex flex-col w-full md:max-w-[250px] h-auto"
-              } `}
-            >
+
+          <div className="relative flex flex-col-reverse w-full h-full border-t-0 md:flex-row-reverse md:grid-cols-3 border-1 scrollbar dark:border-pale-100">
+            {/* <div className="flex flex-col w-full md:max-w-[250px] h-auto">
               <div className="flex w-full h-full overflow-y-scroll bg-neptune-900/80 border-pale-100 border-b-1">
                 <ArtifactData />{" "}
               </div>
               <div className="relative flex flex-shrink-0 w-full h-48">
                 <TensionMonitor />
               </div>
-            </div>
+            </div> */}
             <div className="relative flex w-full h-[calc(60vh)] md:h-full border-b-1 md:border-b-0 border-pale-100 md:border-r-1">
               <ViewPortal />
             </div>

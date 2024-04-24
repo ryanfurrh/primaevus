@@ -84,7 +84,7 @@ export function ViewPortal() {
           right: -2,
           top: 2,
           bottom: 2,
-          near: 1,
+          near: 0.2,
         }}
         gl={{ logarithmicDepthBuffer: true, antialias: false }}
         dpr={0.45}
