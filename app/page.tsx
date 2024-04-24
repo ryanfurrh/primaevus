@@ -32,7 +32,7 @@ export default function HomePage() {
     <div className="flex flex-col items-center justify-center w-full px-4">
       <div className="">
         <PageHeader
-          name="Primæ"
+          name="primæ"
           description=""
           icon={<PrimaeLogoMinimal className="w-7 h-7" />}
         />

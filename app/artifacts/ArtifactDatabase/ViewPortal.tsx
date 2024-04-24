@@ -1,6 +1,6 @@
 "use client";
 
-import { blue, green, lightGreen } from "@mui/material/colors";
+import { blue, cyan, green, lightGreen } from "@mui/material/colors";
 import {
   AsciiRenderer,
   Bounds,
@@ -11,16 +11,26 @@ import {
   OrbitControls,
   OrthographicCamera,
   PerspectiveCamera,
+  RandomizedLight,
+  SpotLight,
   Stage,
   TorusKnot,
   useProgress,
 } from "@react-three/drei";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useRef } from "react";
-import { Mesh } from "three";
+import { Color, Mesh, Object3D } from "three";
 import { GLTFLoader } from "three-stdlib/loaders/GLTFLoader";
 import { useArtifact } from "./ArtifactContext";
 import { ArtifactIndex } from "./ArtifactIndex";
+import { BloomFilter } from "next/dist/shared/lib/bloom-filter";
+import {
+  EffectComposer,
+  Pixelation,
+  Outline,
+  Selection,
+  Select,
+} from "@react-three/postprocessing";
 
 export function ViewPortal() {
   const { selectedArtifact } = useArtifact();
@@ -40,8 +50,8 @@ export function ViewPortal() {
       <>
         <Bounds
           fit
+          observe
           margin={selectedArtifactData?.margin || 1.4}
-          clip
           damping={8}
         >
           <mesh
@@ -65,7 +75,7 @@ export function ViewPortal() {
   return (
     <div className="absolute flex w-full h-full font-jet">
       <Canvas
-        shadows
+        shadows={"percentage"}
         orthographic
         camera={{
           position: [15, 15, 20],
@@ -79,11 +89,25 @@ export function ViewPortal() {
         gl={{ logarithmicDepthBuffer: true, antialias: false }}
         dpr={0.45}
       >
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={2} color="cyan" />
         <directionalLight color="cyan" position={[0, 20, 3]} intensity={5} />
         <pointLight position={[10, 10, 15]} intensity={1} />
+        <Environment preset="night" />
+
         <Suspense fallback={<Loader />}>
-          <Model />
+          <Selection>
+            <EffectComposer autoClear={false}>
+              <Outline
+                edgeStrength={21}
+                visibleEdgeColor={0x66cdaa}
+                hiddenEdgeColor={0x66cdaa}
+                width={5000}
+              />
+            </EffectComposer>
+            <Select enabled>
+              <Model />
+            </Select>
+          </Selection>
         </Suspense>
         <Grid
           infiniteGrid
