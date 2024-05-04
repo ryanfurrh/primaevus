@@ -1,8 +1,8 @@
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import { GlobalNav } from "@/components/GlobalNav";
+import { GlobalNav } from "@/app/components/GlobalNav";
 
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/app/components/Footer";
 import {
   Archivo,
   IBM_Plex_Mono,
@@ -12,9 +12,9 @@ import {
 } from "next/font/google";
 import localFont from "next/font/local";
 import Providers from "./providers";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
-import Version from "@/components/Version";
-import { ArtifactProvider } from "./artifacts/ArtifactDatabase/ArtifactContext";
+import ThemeSwitcher from "@/app/components/ThemeSwitcher";
+import Version from "@/app/components/Version";
+import { ArtifactProvider } from "./artifacts/components/ArtifactContext";
 
 export const metadata = {
   title: "primae",
