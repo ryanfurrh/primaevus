@@ -1,5 +1,5 @@
-import { PageHeader } from "@/components/PageHeader";
-import { CubeFiber } from "@/components/flux/CubeFiber";
+import { PageHeader } from "@/app/components/PageHeader";
+import { CubeFiber } from "@/app/components/flux/CubeFiber";
 import { FluxIcon } from "@/public/icons";
 import Image from "next/image";
 

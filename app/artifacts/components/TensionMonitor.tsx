@@ -22,9 +22,10 @@ import {
   Mesh,
   WireframeGeometry,
 } from "three";
-import { GLTFLoader } from "three-stdlib/loaders/GLTFLoader";
+
 import { useArtifact } from "./ArtifactContext";
 import { ArtifactIndex } from "./ArtifactIndex";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export default function TensionMonitor() {
   const { selectedArtifact } = useArtifact();

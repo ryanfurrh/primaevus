@@ -1,6 +1,6 @@
 "use client";
-import { PageHeader } from "@/components/PageHeader";
-import { Counter } from "@/components/counter";
+import { PageHeader } from "@/app/components/PageHeader";
+import { Counter } from "@/app/components/counter";
 import { WorldIcon } from "@/public/icons";
 import Image from "next/image";
 import React from "react";

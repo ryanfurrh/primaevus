@@ -1,8 +1,8 @@
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
-import getPostMetadata from "@/components/getPostMetadata";
-import { PageHeader } from "@/components/PageHeader";
+import getPostMetadata from "@/app/components/getPostMetadata";
+import { PageHeader } from "@/app/components/PageHeader";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 import { ArrowLeft, DocumentationIcon } from "@/public/icons";

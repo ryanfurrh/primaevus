@@ -1,13 +1,12 @@
 "use client";
 
-import { PageHeader } from "@/components/PageHeader";
+import { PageHeader } from "@/app/components/PageHeader";
 import { CloseIcon, PrimaeLogo, PrimaeLogoMinimal } from "@/public/icons";
 import Image from "next/image";
 import { Suspense } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { Environment, Grid, OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-
 // export const metadata = {
 //   title: "Primævus",
 //   description: "",

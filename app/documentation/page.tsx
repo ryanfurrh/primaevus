@@ -1,6 +1,6 @@
-import { PageHeader } from "@/components/PageHeader";
-import PostPreview from "@/components/PostPreview";
-import getPostMetadata from "@/components/getPostMetadata";
+import { PageHeader } from "@/app/components/PageHeader";
+import PostPreview from "@/app/components/PostPreview";
+import getPostMetadata from "@/app/components/getPostMetadata";
 import { DocumentationIcon } from "@/public/icons";
 import Link from "next/link";
 
